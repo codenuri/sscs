@@ -10,5 +10,37 @@ int main()
 
     n1 = n2;
     n1 = 30;
+
+    n1 = "hello"; // error. 4바이트 정수 보관을 위한 공간에
+                  // 문자열 넣을수 없다.
 }
 // 파이썬 코드
+// => 타입을 표기할 필요 없음
+n1 = 10;
+n2 = 20;
+
+n1 = n2;
+n1 = 30;
+
+n1 = "hello";
+
+// C# : value type 은 "Box"
+//      reference type 은 "PostIt" 이 됩니다.
+
+CPoint cpt = new CPoint(1, 1);
+CPoint cpt1 = cpt;
+
+SPoint spt = new SPoint(1, 1);
+SPoint cpt1 = spt;
+
+
+
+
+
+
+
+// 파이썬
+n1 = 10;
+
+n1 += 1;
+
