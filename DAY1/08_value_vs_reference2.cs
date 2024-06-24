@@ -2,14 +2,14 @@ using static System.Console;
 
 class CPoint
 {
-    private int x;
-    private int y;
+    public int x;
+    public int y;
     public CPoint(int a, int b) { x = a; y = b; }
 }
 struct SPoint
 {
-    private int x;
-    private int y;
+    public int x;
+    public int y;
     public SPoint(int a, int b) { x = a; y = b; }
 }
 class Program
