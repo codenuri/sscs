@@ -18,4 +18,5 @@ WriteLine($"{nameof(color)} : {color}");
 
 string s = "abcd";
 WriteLine($"{nameof(s.Length)} :  {s.Length}"); // "s.Length : 4"
+
 // 변수, 속성(property), 타입이름등에 nameof 사용가능.
