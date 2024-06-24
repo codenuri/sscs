@@ -16,3 +16,4 @@ s2 = "XY"; // new string("XY")
 
 WriteLine($"{object.ReferenceEquals(s1, s2)}"); // false
 
+WriteLine($"{s1}, {s2}"); // "AB", "XY"
