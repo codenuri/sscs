@@ -20,8 +20,9 @@ default:
 object obj = num; // 모든 변수는 object 타입으로 가리킬수 있다.
 				  // "object" 항목에서 자세히
 
-switch(num)
+switch(obj)
 {
+	// 아래 case 문은 "값" 이 아닌 "타입" 조사 라는 것이 핵심 입니다.
 	case int:    Console.WriteLine("int"); break;
     case double: Console.WriteLine("double"); break;
 	default:	 Console.WriteLine("other"); break;
