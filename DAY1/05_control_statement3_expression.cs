@@ -25,7 +25,7 @@ Console.WriteLine($"{n = 5}");
 // int score = 3;
 // 그래서 rust 는 if 문을 아래 처럼 사용할수 있습니다.
 // => 단, 이경우는 else 생략이 안됩니다.
-//string s = if ( score > 70 ) "pass" else "fail";
+string s = if ( score > 70 ) "pass" else "fail";
 
 // C# : if 는 expression 이 될수 없습니다.
 //      단, switch 가 expression 이 될수 있습니다.
