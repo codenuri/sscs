@@ -11,5 +11,5 @@ if (s is null) { }
 if (n is null) { }
 
 // HasValue 속성 사용
-if (s.HasValue) { }
-if (n.HasValue) { }
+if (s.HasValue) { } // error. reference type 은 이 속성없습니다.
+if (n.HasValue) { } // ok.    Nullable<T> 는 있습니다.
