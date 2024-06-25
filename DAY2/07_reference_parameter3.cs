@@ -10,13 +10,12 @@ class Point
 
 class Program
 {
-    public static void NoModifier(Point pt)
+    public static void RefModifier(ref Point pt)
     {
         pt.x = 2;
         pt.y = 2;
 
-        // 이예제의 핵심은 아래 한줄!
-        pt = new Point(3, 3);
+//        pt = new Point(3, 3);
     }
 
     public static void Main()
@@ -24,7 +23,7 @@ class Program
         Point p1 = new Point(1, 1);
         Point p2 = p1;
 
-        NoModifier(p1);
+        RefModifier(ref p1);
 
         WriteLine($"{p1.x} {p1.y}");
         WriteLine($"{p2.x} {p2.y}");
