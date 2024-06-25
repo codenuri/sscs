@@ -2,19 +2,31 @@ using static System.Console;
 
 class Program
 {
-	public static void Swap( int a, int b)
-	{
-		int temp = a;
-		a = b;
+    // Swap : 인자의 복사본을 만들면 안됩니다.
+    //        인자의 R/W가 모두 필요 합니다. 
+    //        ref 로 해야 합니다.
+    /*
+    public static void Swap( ref int a, ref int b)
+    {
+        int temp = a;
+        a = b;
 		b = temp;
 	}
-	public static void Main()
+    */
+    // Generic 버전
+    public static void Swap<T>(ref T a, ref T b)
+    {
+        T temp = a;
+        a = b;
+        b = temp;
+    }
+    public static void Main()
 	{
 		int x = 1;
 		int y = 2;
 
 		// Swap 을 만들어 보세요
-		Swap( x, y );
+		Swap( ref x, ref y );
 
 		WriteLine($"{x}, {y}"); // 2, 1 나와야 합니다.
 	}
