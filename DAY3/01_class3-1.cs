@@ -15,12 +15,7 @@ class Rect
     // C++      : 멤버 함수
     // C#, Java : 메소드(method)
     public Rect(int x1, int y1, int x2, int y2)
-    {
-        left = x1;
-        top = y1;
-        right = x2;
-        bottom = y2;
-    }
+     => (left, top, right, bottom) = (x1, y1, x2, y2);
 
 
     public int GetArea()
