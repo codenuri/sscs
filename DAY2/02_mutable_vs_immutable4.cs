@@ -27,3 +27,8 @@ WriteLine(sb); // "XBCDKK"
 // => 단축 표기법 제공안됨
 // StringBuilder sb1 = "ABCD"; // error
 
+// 변경할 필요가 있을때만 StringBuilder 사용하세요
+// 항상 "immutable" 이 빠르고 안전합니다. 동기화도 필요 없습니다.
+// "mutable" 은 고려사항이 많습니다.
+
+
