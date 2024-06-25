@@ -16,8 +16,11 @@ int some_work(int arg)
     return 0;   // 0은 "값없음"을 나타내지는 않습니다.
                 // 단지, 약속으로 0, -1 등을 "실패(값없음)"으로 약속한것일뿐
 }
- 
 
+// #3. Nullable<T> 를 사용하면 value type에 null 로 초기화 가능합니다.
+// => T 는 반드시 value type 이어야 합니다.
+
+Nullable<int> n2 = null;
   
 
 
