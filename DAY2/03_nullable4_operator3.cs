@@ -29,9 +29,12 @@ if (o1 is int n2)
 }
 
 // #4. as 연산자 사용
+// => nullable 타입으로 캐스팅만 가능. 
 int  n3 = (int)o1;    // o1이 가리키는 곳인 int 아니면 예외
 int? n4 = o1 as int?; // o1이 가리키는 곳인 int 아니면 null반환
 int  n5 = o1 as int;  // error. 
+
+int  n6 = (o1 as int?) ?? 0;
 
 
 
