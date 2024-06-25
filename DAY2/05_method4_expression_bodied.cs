@@ -11,7 +11,9 @@ class Program
     // C# 에서는 구현부가 단순한 경우 아래 처럼 만드는 경우가 대부분입니다.
     // => 아래 코드는 위와 완전히 동일합니다.
     // => "expression bodied" 라는 문법 입니다.
-    public static int Square1(int x) => x * x;
+//   public static int Square1(int x) => x * x;
+
+    public static int Square1(int x) => WriteLine("AA"), x* x;
 
 
 
