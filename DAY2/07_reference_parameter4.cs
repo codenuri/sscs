@@ -11,20 +11,20 @@ class Point
 class Program
 {
     // 규칙 4. reference 타입을 "out" 로 받으면
-    // 1. ?
-    // 2. ?
-    public static void RefModifier(ref Point pt)
+    // 1. 기존 객체의 속성 변경 ??
+    // 2. 새로운 객체 담아오기 ??
+    public static void OutModifier(out Point pt)
     {
-        pt.x = 2;
-        pt.y = 2;
-        pt = new Point(3, 3); 
+        pt.x = 2;               // ?
+      
+        pt = new Point(3, 3);   //?
     }
 
     public static void Main()
     {
         Point p1 = new Point(1, 1);
 
-        RefModifier(out p1);
+        OutModifier(out p1);
 
         WriteLine($"{p1.x} {p1.y}");
     }
