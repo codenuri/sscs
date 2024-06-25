@@ -24,10 +24,10 @@ class Program
         // 아래 한줄을 생각해 봅시다.
 		// => tuple 이 아닌 Point3D 타입의 객체를
 		//    tuple destruction 처럼 사용하는 코드
-        (int a1, int a2, int a3) = p;
+//        (int a1, int a2, int a3) = p;
 
 		// 위 코드를 컴파일러가 아래 처럼 변경합니다
-//		p.Deconstruct(out int a1, out int a2, out int a3);
+		p.Deconstruct(out int a1, out int a2, out int a3);
 
 
 
