@@ -31,17 +31,14 @@ class Program
         M4(new int[] { 1, 2, 3 });
         M4(1, 2, 3); // ok!! 핵심
                      // 1,2,3 을 컴파일러가 "new int[]{1,2,3}" 으로변경
+
+        M6(1, 2, 3, 4); // error
     }
 
 
-
-
-
-
-
     // 주의 사항
-//  public static void M5(int[] ar, int n) { }			
-//	public static void M6(params int[] ar, int n) { }	
+    public static void M5(int[] ar, int n) { }			// ok
+	public static void M6(params int[] ar, int n) { }	// error
 
 }
 	
