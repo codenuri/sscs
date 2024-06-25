@@ -31,4 +31,4 @@ var t6 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, Tuple.Create(8, 9, 10));
 
 WriteLine($"{t6.Rest.Item1}"); // (8, 9, 10)
 WriteLine($"{t6.Rest.Item1.Item1}"); // 8
-WriteLine($"{t6.Rest.Item1.Item1}"); // 9
+WriteLine($"{t6.Rest.Item1.Item2}"); // 9
