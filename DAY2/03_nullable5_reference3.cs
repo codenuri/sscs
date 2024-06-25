@@ -1,5 +1,5 @@
 ﻿//#nullable disable // nullable reference 문법을 사용하지말라
-#nullable enable    // nullable reference 문법을 사용해달라.
+// #nullable enable    // nullable reference 문법을 사용해달라.
 
 string name = "kim";
 
