@@ -13,9 +13,8 @@ var t4 = Tuple.Create(1, 2, 3);
 
 
 // #2. Tuple 은 immutable 합니다.
-t4.Item1 = 10;    // error
+//t4.Item1 = 10;    // error
 int n = t4.Item1; // ok
-
 
 // #3. 8개 까지만 저장 가능합니다.
 //var t5 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, 8, 9); // error
@@ -26,3 +25,10 @@ WriteLine($"{t5.Item1}"); // 1
 WriteLine($"{t5.Item7}"); // 7
 WriteLine($"{t5.Rest}"); // (8)
 WriteLine($"{t5.Rest.Item1}"); // 8
+
+// #5. 8개이상 사용하려면 nested 구조로 사용합니다.
+var t6 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, Tuple.Create(8, 9, 10));
+
+WriteLine($"{t6.Rest.Item1}"); // (8, 9, 10)
+WriteLine($"{t6.Rest.Item1.Item1}"); // 8
+WriteLine($"{t6.Rest.Item1.Item1}"); // 9
