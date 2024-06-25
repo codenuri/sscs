@@ -8,6 +8,11 @@ class Point3D
 	// => int 객체 3개를 가지고 Point3D 객체를 만드는 역활.
 	public Point3D(int a, int b, int c)
 		=> (x, y, z) = (a, b, c);
+
+	// Deconstruct 
+	// => Point3D 를 int 3개로 deconstuct 할때 사용
+	public void Deconstruct(out int a, out int b, out int c)
+		=> (a, b, c) = (x, y, z);
 }
 
 class Program 
