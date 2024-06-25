@@ -25,17 +25,27 @@ class Point
     // public var Get()	// error. var 를 리턴 자리에 사용할수 없습니다
     // public ValueTuple<int, int> Get() // ok
 
-    public (int, int) Get() // ok
+    // public (int, int) Get() // ok
+    public (int x, int y) Get() // ok
     {
 		return (x, y);
 	}
 }
-
-
 class Program 
 {
 	public static void Main()
 	{
 		Point p = new Point(1,2);
-	}
+
+		var ret = p.Get(); // ret 는 (int, int) 타입입니다.
+		WriteLine($"{ret.Item1}, {ret.Item2}");
+        WriteLine($"{ret.x}, {ret.y}");
+
+
+        var ret1 = p.Get(); // 반환결과를 tuple 에 담은 것
+		(int x, int y) = p.Get(); // 반환 결과를 deconstruction 해서
+                                  // int 2개 변수에 담은것
+
+        WriteLine($"{x}, {y}");
+    }
 }
