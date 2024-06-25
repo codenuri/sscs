@@ -28,6 +28,14 @@ class Program
 		// c == null 이면 아무일도 하지 않습니다.
 		// 아래 한줄이 위코드와 동일합니다.
 		c?.Go();
+
+		// ? 를 헷갈리지 마세요
+
+		int? n3; // 타입 옆에 ? 입니다. nullable 변수 선언
+		c?.Go(); // 객체 옆에 ? 입니다. c가 null 이 아니면 Go()호출
+
+		int a = n3 ?? 3; // ? 가 2개(??) 입니다.
+					     // n3.GetValueOrDefault(3)
     }      
 }   
 
