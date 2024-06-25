@@ -21,6 +21,13 @@ var t1 = (a, b, c); // var t1 = (1,2,3)
 
 
 // #3. 아래 2줄의 차이점을 잘 생각해 보세요.
-(int a1, int a2, int a3) t2 = (1, 2, 3);
-(int b1, int b2, int b3)    = (4, 5, 6);
+(int a1, int a2, int a3) t2 = (1, 2, 3);    // t2라는 tuple 을 생성한것
+                                            // 각 요소는 a1, a2, a3이름사용
+                                            // named tuple
+                                            // "(int a1, int a2, int a3)" 는 타입
+
+(int b1, int b2, int b3)    = (4, 5, 6);    // tuple  의 생성이 아닌
+                                            // deconstruction 코드
+                                            // (4,5,6) 이라는 tuple 의 각요소를
+                                            // int 3개 변수에 담은것
 
