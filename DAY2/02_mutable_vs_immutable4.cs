@@ -16,4 +16,14 @@ StringBuilder sb = new StringBuilder("ABCD");
 
 sb[0] = 'X'; // ok
 
-WriteLine(sb);
+WriteLine(sb); // "XBCD"
+
+// 문자열 변경에 관련된 많은 메소드가 있습니다.
+sb.Append("KK");
+
+WriteLine(sb); // "XBCDKK"
+
+// StringBuilder 는 "new" 로만 생성가능합니다.
+// => 단축 표기법 제공안됨
+// StringBuilder sb1 = "ABCD"; // error
+
