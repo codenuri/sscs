@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Numerics;
+
+class Program
 {
     // 인자로 int 만 받을수 있습니다.
     public static void M1(int n) { }
@@ -11,10 +13,12 @@
     public static void Main()
     {
         M1(10);
-        M1("ABCD");
+        M1("ABCD");        
 
         M2(10);
         M2("ABCD");
+
+        
 
         // 어떠한  타입을 몇개 라도 보낼수 있는메소드
         // WriteLine 의 원리
@@ -24,6 +28,7 @@
     {
         foreach( object o in arr )
         {
+
             // 모든 타입은 object 에서 파생되는데, object 에는 ToString()이 있습니다.
             // 즉, 모든 객체는 ToString()이 있습니다.
             string s = o.ToString();
@@ -37,3 +42,16 @@
 
 
 
+/*/// [] 표기법 : 모든 컬렉션을 초기화 할때 동일방법 사용
+int[] arr = [1, 2, 3];  // ok
+
+List<int> list = [1, 2, 3]; // ok
+
+var a = [1, 2, 3]; // 될까요 ? 안될까요 ?
+
+// 10 : int 타입
+// 3.4 : double
+// new int[]{1,2,3}; // int[]
+
+// [1,2,3]; // ??타입을 알수 없다.
+*/
