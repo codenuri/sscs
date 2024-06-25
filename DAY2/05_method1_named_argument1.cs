@@ -33,7 +33,7 @@ class Program
         // 이후 부터는 Positional 은 사용할수 없습니다.
         SetRect(y: 10, x: 10, 30, 30); // error
 
-        SetRect(x: 10, 10, Width:30, 30); // ok. 순서 변경 안됨.
+        SetRect(x: 10, 10, width:30, 30); // ok. 순서 변경 안됨.
 
 
     }
