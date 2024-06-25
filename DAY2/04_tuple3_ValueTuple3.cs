@@ -42,7 +42,7 @@ class Program
         WriteLine($"{ret.x}, {ret.y}");
 
 
-        var ret1 = p.Get(); // 반환결과를 tuple 에 담은 것
+        var ret1       = p.Get(); // 반환결과를 tuple 에 담은 것
 		(int x, int y) = p.Get(); // 반환 결과를 deconstruction 해서
                                   // int 2개 변수에 담은것
 
