@@ -32,10 +32,14 @@ WriteLine($"{vt6.Item1}"); // 10
 // #5. Named Member
 (int, int, int)       vt7 = (1,2,3); // unnamed tuple
                                      // 요소 접근시 "Item1, Item2..." 사용
+
 (int one, int two, int three) vt8 = (1, 2, 3); // named tuple
+var vt9 = (one:1, two:2, three:3);             // named tuple
 
 
 
-WriteLine($"{vt7.Item1}");
-WriteLine($"{vt8.Item1}");
-WriteLine($"{vt8.one}");
+WriteLine($"{vt7.Item1}");  // 1
+WriteLine($"{vt8.Item1}");  // 1
+WriteLine($"{vt8.one}");    // 1
+WriteLine($"{vt9.Item1}");  // 1
+WriteLine($"{vt9.one}");    // 1
