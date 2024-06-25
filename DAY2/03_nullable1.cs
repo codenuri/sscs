@@ -20,8 +20,13 @@ int some_work(int arg)
 // #3. Nullable<T> 를 사용하면 value type에 null 로 초기화 가능합니다.
 // => T 는 반드시 value type 이어야 합니다.
 
-Nullable<int> n2 = null;
-  
+Nullable<int> n2 = null; // 내부적으로 "int 한개 + bool" 보관하는 것
+Nullable<int> n3 = 10;
+
+
+// T? 가 Nullable<T> 에 대한 단축 표기법 입니다.
+int? n4 = null; // Nullable<int> n4 = null 과 동일
+
 
 
 
