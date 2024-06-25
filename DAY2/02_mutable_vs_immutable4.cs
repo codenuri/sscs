@@ -32,3 +32,17 @@ WriteLine(sb); // "XBCDKK"
 // "mutable" 은 고려사항이 많습니다.
 
 
+/*
+// C/C++/JAVA/C#
+// => 기본이 mutable, 
+// => 단, string 등의 성능에 중요한 영향을 미치는 경우 
+//    타입 자체를 immutable 하게 제공
+int n = 0;       // n 은 mutable 합니다. 변경가능
+const int c = 0; // c 는 immutable 합니다. 변경 불가능.
+
+// RUST, haskell 등의 함수 형 언어
+// => 모든 타입은 기본이 "immutable"
+// => 변경 가능하려면 "mut" 사용
+n: int  = 10;       // immutable 합니다. 변경 불가능.
+n: mut int  = 10;   // mutable 합니다. 변경 가능.
+*/
