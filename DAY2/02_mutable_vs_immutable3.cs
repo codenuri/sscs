@@ -12,7 +12,6 @@ int n2 = new int();
 // => s1, s2 가 공유 하게 됩니다.
 string s1 = "BBB"; // new string("BBB")
 string s2 = "BBB";
-
 WriteLine($"{object.ReferenceEquals(s1, s2)}");
 
 // #2. 아래 처럼 "new" 로 문자열을 만들면
@@ -20,5 +19,13 @@ WriteLine($"{object.ReferenceEquals(s1, s2)}");
 string s3 = new string("AAA");
 string s4 = new string("AAA");
 WriteLine($"{object.ReferenceEquals(s3, s4)}");
+
+// 공유 되는 문자열을 있는 공간을
+// => "intern pool" 이라고 합니다.
+// => java 도 동일한 용어를 사용합니다
+
+string s5 = Console.ReadLine(); // "BBB" 입력해보세요
+
+WriteLine($"{object.ReferenceEquals(s1, s5)}"); // True ? False
 
 
