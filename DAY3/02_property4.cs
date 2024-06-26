@@ -15,3 +15,8 @@ WriteLine( arr.Length);
 WriteLine( arr.GetLength(0));
 
 
+int[,] arr2 = new int[3, 2];
+
+WriteLine(arr2.GetLength(0));
+WriteLine(arr2.GetLength(1));
+
