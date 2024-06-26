@@ -12,6 +12,6 @@ WriteLine(s.Length);  // s.GetLength() 같은 메소드가 아닙니다.
 // 1. 단순히 정보를 얻는 것이 아닌, 어떤 연산을 하거나
 // 2. 정보를 얻을때도 인자가 필요한 경우 입니다.
 WriteLine( arr.Length);
-WriteLine(arr.GetLength(0));
+WriteLine( arr.GetLength(0));
 
 
