@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Runtime.Serialization;
 using System.Security.Cryptography;
 using static System.Console;
 
@@ -15,6 +16,14 @@ class Point
 
         return p3;
     }
+
+    public void Deconstruct(out int a, out int b)
+        => (a, b) = (X, Y);
+
+    // 변환 연산자 메소드 : 이 메소드는 메소드 이름에 반환 타입이 포함됩니다.
+    //                    따라서 반환 타입을 표기 하지 않는 것이 특징입니다.
+    public static implicit operator int(Point pt)
+        => pt.X;
 }
 
 class Program
@@ -23,6 +32,10 @@ class Program
     {
         Point p1 = new Point(1, 1);
 
+        (int x, int y) = p1; // deconstruction
+                             // p1.Deconstruct(out int x, out int y)
+        int a = p1; // p1.Deconstruct(out int a) 를 호출하는 것이 아니라!
+                    // Point.implicit operator int(p1)
     }
 }
 
