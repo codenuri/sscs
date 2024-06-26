@@ -27,9 +27,15 @@ class Program
         // Color 가 있을수도 있고 없을수도 있습니다.
 
         // static type check : Color가 없을수도 있으니 컴파일시간 에러발생하자
+        //                      C++, C#, Java
         // dynamic type check : 컴파일은 허용하고, 실행시 Color가 없으면
         //                      실행시 에러(예외 발생)내자.
+        //                      Python
 
-        a.Color = 0;
+//      a.Color = 0; // static type check 이므로 에러
+
+        // a가 가리키는 곳이 Dog 라는 확신이 있으면 캐스팅해서 접근
+        Dog d = (Dog)a;
+        d.Color = 10;
     }
 }
