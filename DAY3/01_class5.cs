@@ -26,11 +26,20 @@ class Program
         Point3D p = new Point3D(1, 2, 3);
 
         (int a1, int a2, int a3) = p;
+//      p.Deconstruct(out int a1, out int a2, out int a3);
 
         (int b1, int b2) = p;
 
-        int c1 = p;
+        // 한개의 경우는 직접 호출해야 합니다.
+  //      int c1 = p; // error
+  //      p.Deconstruct(out int c); // ok
 
+        // 이유는 
+        // => 변환 연산자 함수와의 충돌을 피하기 위해서 입니다.
+//        int c1 = p; // 이 순간 Point3d => int 로 변경하는
+                    // 변환연산자 함수 호출됩니다.
+                    // 따라서, Deconstruct 와의 충돌 가능성 때문에
+                    // 위 코드가 안됩니다.
 
         WriteLine($"{a1}, {a2}, {a3}");
     }
