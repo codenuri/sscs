@@ -35,7 +35,7 @@ class Program
 //      a.Color = 0; // static type check 이므로 에러
 
         // a가 가리키는 곳이 Dog 라는 확신이 있으면 캐스팅해서 접근
-        Dog d = (Dog)a;
+        Dog d = (Dog)a; // a가 가리키는 곳이 Dog 가아니면 runtime error(예외)
         d.Color = 10;
     }
 }
