@@ -20,8 +20,17 @@ class Sentence
 //  public string Name            // property
     public string this[int index] // indexer
     {
-        get =>words[index];
+        get => words[index];
         set => words[index] = value;    // 구현은 property 와 동일
+    }
+
+    // 배열에 있는 문자열 합치는법
+    // string s = string.Join(" ", words)
+
+    // Text 속성 만들어 보세요
+    public string Text
+    {
+        get => string.Join(" ", words);
     }
 }
 
@@ -35,6 +44,6 @@ class Program
 
         s[0] = "Cat";
 
-//      WriteLine(s.Text);  // Cat is Animal
+        WriteLine(s.Text);  // Cat is Animal
     }
 }
