@@ -1,8 +1,11 @@
 using static System.Console;
+
 // Sentence : 문장을 단어별로 관리/접근 할수 있는 클래스
 class Sentence
 {
     // 아래 필드는 아직 배열 객체는 만들지 않고, 단지 reference만 있습니다.
+    // => 또한 이 배열은 외부에서는 접근할 필요가 전혀 없습니다.
+    // => 프라퍼티를 사용할 필요 없습니다. 그래서 private 필드.. 
     private string[] words;
 //  private string[] words = new string[3]; // 이렇게 해야 배열 생성한것
 
