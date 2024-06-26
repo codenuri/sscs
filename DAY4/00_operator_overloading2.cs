@@ -1,4 +1,6 @@
-﻿using static System.Console;
+﻿using System.Runtime.Serialization;
+using System.Security.Cryptography;
+using static System.Console;
 
 class Point
 {
@@ -29,5 +31,14 @@ class Program
     }
 }
 
+// 연산자 재정의 반드시 필요한 문법일까 ?
 
+Point p3 = p1 + p2; // 왜?? + 하는가 ?
+
+Point p3 = p1.Add(p2); // 이렇게 하면 새로운 문법을 배우지 않아도 되는데 !!
+
+// C++  : 거의 모든 연산자를 재정의 가능
+// java : 연산자 재정의 문법 지원 안함
+// C#   : 중요한 20여개의 연산자만 가능(+, -, *, /, ==, !=, < 등....)
+// PYTHON : 대부분의 연산자 재정의 가능.
 
