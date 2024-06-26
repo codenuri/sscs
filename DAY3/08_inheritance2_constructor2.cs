@@ -8,17 +8,21 @@ class Base
     // => 아래 Derived 에서 에러를 모두 찾으세요.
     public Base(int a) { WriteLine("Base(int)"); }
 }
+
 class Derived : Base
-{
-    public Derived()
+{ 
+                        // 컴파일러가 변경한 코드
+    public Derived()    // Derived() : base()  <== 여기서 에러!
     {
         WriteLine("Derived()");
     }
-    public Derived(int a)
+    public Derived(int a)   // Derived(int) : base() 
     {
         WriteLine("Derived(int)");
     }
 }
+
+
 
 class Program
 {
