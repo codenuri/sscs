@@ -27,6 +27,17 @@ class Date
         // => 잘못된 구현 입니다. 복습할때 제대로 구현해 보세요.
         return new Date(Year, Month, Day + ds);
     }
+
+    // 아래 메소드를 "instance method"로 만들면 호출하기 위해 반드시
+    // 객체가 있어야 합니다.
+    // Date d = new Date(2024, 6, 26);
+    // d.HowManyDays(5);
+    // public int HowManyDays(int m) { return days[m - 1]; }
+
+    // static method로 하면 
+    // 객체 없이 호출 가능합니다.
+    // Date.HowManyDays(5)
+    public static int HowManyDays(int m) { return days[m - 1]; }
 }
 
 class Program
@@ -36,6 +47,12 @@ class Program
         Date d1 = new Date(2024, 6, 24);
         Date d2 = new Date(2024, 7, 1);
 
+        // #1. 특정일 이 지난후의 날짜 구하기 함수
         Date dest = d1.AfterDays(1000);
+
+
+        // #2. 5월달이 몇일까지 있는지 알고 싶다.!
+        // int ds = d1.HowManyDays(5);
+        int ds = Date.HowManyDays(5);
     }
 }
