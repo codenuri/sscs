@@ -23,9 +23,9 @@ class Point
     // 변환 연산자 메소드 : 이 메소드는 메소드 이름에 반환 타입이 포함됩니다.
     //                    따라서 반환 타입을 표기 하지 않는 것이 특징입니다.
     public static implicit operator int(Point pt)
+//    public static explicit operator int(Point pt)
         => pt.X;
 }
-
 class Program
 {
     public static void Main()
