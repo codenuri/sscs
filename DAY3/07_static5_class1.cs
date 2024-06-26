@@ -19,14 +19,22 @@ int Square(int x)
 */
 
 // #2. 클래스로 만들어야 합니다.
-class Math
+// Date, Person, Point, Rect : 상태(필드)가 있으므로 객체를 생성해서 보관해야합니다.
+// Math : 단지, 수학관련 메소드를 제공할뿐, 저장될 데이타는 없습니다.
+//        모든 메소드를 static 으로 하는 것이 편리합니다.
+
+// static class : 모든 멤버가 static 인 클래스
+//                객체를 생성할수 없게 하기 위해 사용.
+//                Math 를 static 으로 안해도 되지만, 안전하게 하기 위해서는
+//                static class 로 설계 하는 것이 좋다.
+static class Math
 {
-    int Max(int a, int b)
+    public static int Max(int a, int b)
     {
         return a < b ? b : a;
     }
 
-    int Square(int x)
+    public static int Square(int x)
     {
         return x * x;
     }
@@ -36,6 +44,8 @@ class Program
 {
 	public static void Main()
 	{
+        int n = Math.Square(2);
 
+//        Math m = new Math();
 	}
 }
