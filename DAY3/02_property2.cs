@@ -8,11 +8,11 @@ class Person
     public int Age
     {
         get { return age; } 
-        set { age = value; }
+        set { age = value; }    // value 는 이 위치에서만 사용가능한 키워드입니다.
+                                // "context keyword" 라고 합니다.
+                                // 특정 위치에서만 사용가능한 키워드
     }
 }
-
-
 
 class Program
 {
@@ -20,7 +20,12 @@ class Program
     {
         Person p1 = new Person();
 
-        p1.SetAge(-10);
+        p1.Age = 10;        // 이순간 set 부분 실행
+                            // value 에는 10 전달 
+
+        int n = p1.Age;     // 이순간 get 부분 실행됨
+
+        Console.WriteLine(n);
 
     }
 }
