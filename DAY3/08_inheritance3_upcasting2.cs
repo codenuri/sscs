@@ -35,7 +35,31 @@ class Program
 //      a.Color = 0; // static type check 이므로 에러
 
         // a가 가리키는 곳이 Dog 라는 확신이 있으면 캐스팅해서 접근
-        Dog d = (Dog)a; // a가 가리키는 곳이 Dog 가아니면 runtime error(예외)
-        d.Color = 10;
+//      Dog d = (Dog)a; // a가 가리키는 곳이 Dog 가아니면 runtime error(예외)
+//      d.Color = 10;
+
+
+        // a가 가리키는 곳이 Dog 라는 확신이 없으면 조사하면 됩니다.
+
+        // #1. is 연산자
+        if ( a is Dog )
+        {
+            Dog d = (Dog) a;
+            d.Color = 10;
+        }
+
+        if ( a is Dog d)
+        {
+            d.Color = 10;
+        }
+
+        // #2. as 연산자
+        Dog d2 = a as Dog; // a가 Dog 가 아니면 null
+
+        if ( d2 != null)
+        {
+            d2.Color = 10;
+        }
     }
+
 }
