@@ -1,5 +1,11 @@
 ﻿using static System.Console;
 
+// instance xxxx : 객체의 데이타와 관련 있는 것.. 
+// static   xxxx : 객체 자체의 데이타와는 관련 없는것
+
+// static field  : 모든 객체가 공유하는 데이타
+// static method : 객체 없이 호출가능한 메소드
+
 
 class Car
 {
