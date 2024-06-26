@@ -47,13 +47,13 @@ class Program
             Dog d = (Dog) a;
             d.Color = 10;
         }
-
         if ( a is Dog d)
         {
             d.Color = 10;
         }
 
         // #2. as 연산자
+        Dog d1 = (Dog)a;   // a가 Dog 가 아니면 runtime 에러(예외)
         Dog d2 = a as Dog; // a가 Dog 가 아니면 null
 
         if ( d2 != null)
