@@ -12,7 +12,7 @@ class Derived : Base
     { 
         WriteLine("Derived()"); 
     }
-    public Derived(int a) 
+    public Derived(int a)       // public Derived(int a) : base() 
     { 
         WriteLine("Derived(int)"); 
     }
