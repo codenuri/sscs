@@ -38,6 +38,18 @@ class Date
     // 객체 없이 호출 가능합니다.
     // Date.HowManyDays(5)
     public static int HowManyDays(int m) { return days[m - 1]; }
+
+    // 아래 메소드는 "기준일"이 필요 합니다.
+    // 즉, 객체가 있어야 내일도 구할수 있습니다.
+    // 따라서 "객체" 를 만든후 호출하는 instance method 이어야 합니다.
+    public Date Tomorrow()
+    {
+        Date td = new Date(Year, Month, Day);
+
+        td.Day += 1; // 잘못된 구현. 복습시 제대로 구현해 보세요
+
+        return td;
+    }
 }
 
 class Program
