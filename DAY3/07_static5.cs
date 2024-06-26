@@ -1,5 +1,8 @@
 ﻿// 아래 코드를 보고 에러를 모두 찾으세요
-// 핵심 
+// 핵심 : static method 에서는 static 멤버(static field, static method)
+//        만 접근할수 있다.
+//        외우기 보다는 "메모리 상황을 이해해 보세요"
+
 // static method : 객체가 없어도 호출가능
 // static field  : 모든 객체가 공유, 객체가 없어도 메모리에 존재 
 /*
