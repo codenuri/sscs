@@ -72,5 +72,16 @@ class Program
         // => 아래 메소드는 static method 로 할까요 ?
         // => instance method로 할까요 ?
         Date td = d1.Tomorrow();
+
+
+        // #4. 윤년인지 알고 싶다 ?
+        // => 연도만 알면 된다. !!
+
+        // #1.
+        bool b1 = Date.IsLeapYear( 2024 );
+
+        // #2.
+        Date d3 = new Date(2024, 6, 26); // 날짜가 필요해서 이미 만들었는데
+        bool b2 = d3.IsLeapYear();       // 그날짜가 윤년인지 알고 싶다
     }
 }
