@@ -54,5 +54,11 @@ class Program
         // #2. 5월달이 몇일까지 있는지 알고 싶다.!
         // int ds = d1.HowManyDays(5);
         int ds = Date.HowManyDays(5);
+
+
+        // #3. 내일 날짜를 알고 싶다.
+        // => 아래 메소드는 static method 로 할까요 ?
+        // => instance method로 할까요 ?
+        Date td = d1.Tomorrow();
     }
 }
