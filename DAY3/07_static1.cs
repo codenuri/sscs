@@ -1,5 +1,9 @@
 ﻿using static System.Console;
 
+// 핵심
+// instance field : 객체당 한개, "객체이름.필드이름" 으로 접근
+// static field   : 클래스당한개, "클래스이름.필드이름" 으로 접근
+
 class Car
 {
     public int Color { get; set; } = 0;
