@@ -44,6 +44,9 @@ class Program
 
         Dog d2 = (Dog)a; // 또는 이렇게
         d2.Color = 10;
+
+        // 단, 이때 a 가 가리키는 곳이 Dog 라는 확신이 있어야 합니다.
+        // Dog 가 아닌 다른 객체라면 runtime error(예외 발생)
         
     }
 }
