@@ -30,7 +30,9 @@ class Program
 
         Point p3 = p1 + p2; // 파이썬 : p1.__add__(p2)
                             // C#    : Point.operator+(p1, p2)
+                            // C++   : p1.operator+(p2)
 
+                            // 구현은 2번소스에서
 
 
         WriteLine($"{p3.X} {p3.Y}");
