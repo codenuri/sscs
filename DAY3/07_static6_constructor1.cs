@@ -12,6 +12,7 @@ class Train
 
 	// static 생성자 : 최초 1회만 호출.
 	//				   객체를 10개 만들어도 처음에 한번만 호출
+	//			      접근지정자(public)을 표기하지 않습니다.
     static Train() { WriteLine("static Train()");  }
 }
 
