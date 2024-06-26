@@ -11,6 +11,12 @@
 // 2. Student 생성자 만들어 보세요
 // 3. Main 에서 Student 객체 생성해 보세요
 
+class Student : Person
+{
+    private int id;
+
+}
+
 class Program
 {
     public static void Main()
