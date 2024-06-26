@@ -5,7 +5,7 @@ class Person
 {
     // 아래 코드는 필드가 아닌 속성입니다.
     // => get, set 중 한개만 제공할수도 있습니다.
-    public string Name { get; };
+    public string Name { get; }
     public string Address { get; set; }
 
     public Person(string name, string address)
@@ -25,10 +25,10 @@ class Person
 class Program
 {
     public static void Main()
-    {
-        Person p = new();
+    { 
+        Person p = new Person("kim", "seoul");
 
-        p.Name = "kim";      // error. set 안됨
+ //       p.Name = "kim";      // error. set 안됨
         string s = p.Name;   // ok.. get 은 가능
 
         p.Address = "seoul"; // R/W 가능
