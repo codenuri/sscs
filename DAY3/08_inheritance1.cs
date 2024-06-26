@@ -44,6 +44,9 @@ class Program
 
 // 거의 모든 객체지향 언어는 상속을 지원합니다. 표기법만 다릅니다.
 // C#     : class Student : Person {}
+
 // C++    : class Student : public Person {}
+
 // Java   : class Student extends  Person {}
-// Python : class Student(Person) {}
+
+// Python : class Student(Person) 
