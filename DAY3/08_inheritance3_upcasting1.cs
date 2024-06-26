@@ -42,6 +42,10 @@ class Program
         // 캐스팅해야 합니다.
         ((Dog)a).Color = 10;
 
+ //       Dog d2 = a; // error. a가 정말 Dog 를 가리키는지는 컴파일러는 
+                    // 모릅니다.
+                    // if(실행시간입력값 == 1) a = 다른 동물;
+
         Dog d2 = (Dog)a; // 또는 이렇게
         d2.Color = 10;
 
