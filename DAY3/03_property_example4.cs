@@ -1,5 +1,10 @@
 ﻿using static System.Console;
 
+// C#은 별도의 용어가 없지만
+// Swift 에서는
+// Name, Age   : 필드가 있는 속성이므로 "Stored Property"
+// Description : "Calculation Property" 라고 합니다
+
 class Person
 {
     private string name;
