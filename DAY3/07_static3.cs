@@ -50,6 +50,20 @@ class Date
 
         return td;
     }
+
+    // IsLeapYear() 같은 메소드는 instance, static 모두 제공하는 것이
+    // 좋은 디자인 입니다.
+    public bool IsLeapYear()
+    {
+        // 필드인 year 를 사용해서 조사
+        return false;
+    }
+    public static bool IsLeapYear(int y)
+    {
+        // 인자인 y 를 사용해서 조사
+        return false;
+    }
+
 }
 
 class Program
