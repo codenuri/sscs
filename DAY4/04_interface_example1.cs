@@ -26,13 +26,18 @@ class Program
 		//        "CompareTo" 메소드 있습니다.
 
 		IComparable c = s1;
+
+		Foo(s1);
+        Foo(n1);
     }
 
-	
+    //	public static void Foo(int arg) // int 만 받겠다는 의도
+    //public static void Foo(object arg) // 모든 객체 받겠다.
+    public static void Foo(IComparable arg) // CompareTo 가 있는것만 받겠다
+    {
+        // 이 안에서 arg 에 대해서 CompareTo 를 사용하게 됩니다.
+        // "CompareTo" 가 있는 객체만 인자로 받아야 한다면
 
-
-	public static void Foo(int arg)
-	{
-	}
+    }
 
 }
