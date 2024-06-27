@@ -22,6 +22,7 @@ class Point
 
 class Program
 {
+//    public static bool MyReferenceEquals(Point a, Point b)
     public static bool MyReferenceEquals(object a, object b)
         => a == b;
 
@@ -39,6 +40,8 @@ class Program
         Console.WriteLine($"{(object)p1 == (object)p2}");  // false
 
         Console.WriteLine($"{MyReferenceEquals(p1, p2)}");
+        Console.WriteLine($"{object.ReferenceEquals(p1, p2)}");
+        // => 이 메소드 구현이 MyReferenceEquals 과 동일
 
 
 
