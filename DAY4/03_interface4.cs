@@ -9,7 +9,12 @@ interface ICamera
 
     void Take();  // ok
 
-    int Weight { get; }; // ?
+    int Weight { get; }; // ok. Weight 속성을 반드시 만들라는 의미
+}
+
+class Camera : ICamera
+{
+    public void Take() { }
 }
 
 
