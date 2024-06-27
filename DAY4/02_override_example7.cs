@@ -43,6 +43,7 @@ class Program
 
         string s =  p.ToString();
 
+        WriteLine($"{p.X}, {p.Y}");
         WriteLine(s);
     }
 }
