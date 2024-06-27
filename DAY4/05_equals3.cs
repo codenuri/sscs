@@ -41,7 +41,15 @@ class Program
         // 핵심 2. "상태 동일성" 에 대한 최적화!
 
         // 1. 아래 코드의 성능을 생각해 보세요
+        // => p1, p2 는 같은 객체이므로 당연히 상태도 동일합니다.
+        // => 그런데, 위에서 만든 Equals 의 구현은 "모든 멤버를 하나씩 비교"
+        //    하므로 성능이 나쁠수도 있습니다.
         Console.WriteLine($"{p1.Equals(p2)}");
+
+
+        // object.Equals() static method 사용
+        // => 구현 확인해 보세요
+        Console.WriteLine($"{object.Equals(p1, p2)}");
 
     }
 }
