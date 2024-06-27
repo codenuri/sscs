@@ -10,14 +10,16 @@ class Rect
 
 	public void Draw() { WriteLine("Draw Rect"); }
 }
-
-
+class Circle
+{
+    public void Draw() { WriteLine("Draw Circle"); }
+}
 
 class Program 
 {
 	public static void Main()
 	{
-
+		List<Rect> list = new List<Rect>(); // ?
 
 	}
 }
