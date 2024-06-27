@@ -10,7 +10,19 @@ class Label : IComparable
 	
 	public Label(string s) => title = s;
 
-	
+    public int CompareTo(object? obj)
+    {
+		Label? other = obj as Label;
+
+		// "d1.CompareTo(d2)" 에서 d2가 null 이면
+		// d1이 무조건 크다고 반환.
+		if (other == null)
+			return 1;
+
+		// title 은 string 타입인데.. string 타입 자체는
+		// "ComapreTo" 가 이미 있습니다.
+        return title.CompareTo(other.title);
+    }
 }
 
 class Program 
