@@ -13,6 +13,7 @@ class HDCamera
 class People
 {
     public void Use(Camera c) => c.Take();
+    public void Use(HDCamera c) => c.Take();
 }
 
 class Program
