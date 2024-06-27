@@ -38,5 +38,18 @@ class Program
             //var parameters = mi.GetParameters();
         }
 
+        var fields = t.GetFields(); // public 필드만. 
+
+        foreach (FieldInfo fi in fields)
+        {
+            Console.WriteLine($"{fi.Name}");
+        }
+
     }
 }
+
+
+
+
+
+
