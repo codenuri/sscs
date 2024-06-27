@@ -45,10 +45,20 @@ class Program
             Console.WriteLine($"{fi.Name}");
         }
 
+
+        // 타입정보를 알고 싶으면 "Type" 타입의 객체가 필요 합니다.
+
+        string s1 = "ABC";
+
+        Type t1 = s1.GetType();     // 1. 객체가 가진 GetType() 메소드 호출
+        Type t2 = typeof(string);   //2. 클래스 이름으로 Type 정보 얻기
+                                    // typeof 키워드(연산자) 사용
     }
 }
 
-
+// 결국 object 제공 7 개중에
+// ToString() 같은 가상 메소드가 3개
+// GetType() 같은 non-virtual 이 4개 
 
 
 
