@@ -6,8 +6,8 @@
 class Object
 {
     // 이 안에는
-    // 5개의 non-virtual method 와
-    // 2개의 virtual method 가 있습니다.
+    // 4개의 non-virtual method 와
+    // 3개의 virtual method 가 있습니다.
 
     public virtual string? ToString()
     {
@@ -24,6 +24,15 @@ class Point   // : Object
     public int Y { get; set; } = 0;
 
     public Point(int a, int b) => (X, Y) = (a, b);
+
+    public override string ToString()
+    {
+        // X, Y 의 값을 문자열로 만들어서 반환
+        // => $ 문자열은 WriteLine 에서만 사용할수 있는 것이 아니라
+        //   일반적으로 사용가능합니다.
+
+        return $"{X}, {Y}";
+    }
 }
 
 class Program
