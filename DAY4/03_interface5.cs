@@ -10,9 +10,15 @@ class Shape
 
     public virtual int GetArea() { return 0; }
 
+    // 가상 메소드 : 재정의 하지 않으면 기본 구현 제공해 줄께!!
+    //              재정의 해서 바꿀수도 있어
+
+    // 추상 메소드 : 반드시 재정의해야 한다고 지시 하는 것
 
     public virtual void Draw() { WriteLine("Draw Shape"); }
 }
+
+
 
 
 
