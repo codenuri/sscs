@@ -13,6 +13,22 @@ class Object
     }
 }
 
+class Rectange // : Object
+{
+    // ToString() 을 override 해서 자신이 가진 필드를 보기좋게 문자열로 반환
+}
+
+class Point // : Object
+{
+    // ToString() 을 override 해서 자신이 가진 필드를 보기좋게 문자열로 반환
+}
+
+class Int32[]
+{
+    // ToString override 하지 않음.
+}
+
+
 class Program
 {
     public static void Main()
