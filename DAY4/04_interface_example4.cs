@@ -1,11 +1,16 @@
 using static System.Console;
 
 
-class Label : IComparable
+class Label : IComparable, ICloneable
 {
     private string title;
 
     public Label(string s) => title = s;
+
+    public object Clone()
+    {
+        return new Label(title);
+    }
 
     public int CompareTo(object? obj)
     {
@@ -29,6 +34,14 @@ class Program
 
 
         Label d3 = (Label)d1.Clone(); // Clone 만드세요
+
+
+        // 핵심 : List 의 사용법을 정확히 학습하고 싶다면..
+        List<int> s = new List<int>();
+
+        s.Add(3);
+        s.Clear();
+
     }
 
 
