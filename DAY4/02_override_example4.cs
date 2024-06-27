@@ -28,7 +28,23 @@ class Program
             else if (cmd == 9)
             {
                 foreach (var s in list)
-                    s.Draw();    
+                {
+                    // s.Draw();// error. 
+
+                    // 문제점 : s 는 "Rect 나 Circle"을 가리키지만 타입이
+                    //          Shape 타입이다.
+
+                    // 해결책 #1. s 를 Rect 나 Circle 타입으로 캐스팅해서 사용하자
+
+                    if ( s is Rect r)
+                    {
+                        r.Draw();
+                    }
+                    else if ( s is Circle c)
+                    {
+                        c.Draw();
+                    }
+                }
             }
         }
     }
