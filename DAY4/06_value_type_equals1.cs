@@ -1,3 +1,4 @@
+using System.Drawing;
 using static System.Console;
 
 struct SPoint
@@ -5,6 +6,16 @@ struct SPoint
     public int X { set; get; } = 0;
     public int Y { set; get; } = 0;
     public SPoint(int a, int b) => (X, Y) = (a, b);
+
+    public static bool operator ==(SPoint a, SPoint b)
+    {
+        return a.X == b.X && a.Y == b.Y;
+    }
+    // == 제공시 != 도 같이 제공하는 것이 원칙 입니다.
+    public static bool operator !=(SPoint a, SPoint b)
+    {
+        return !(a == b);
+    }
 }
 class Program
 {
