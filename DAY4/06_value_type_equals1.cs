@@ -6,7 +6,6 @@ struct SPoint
     public int Y { set; get; } = 0;
     public SPoint(int a, int b) => (X, Y) = (a, b);
 }
-
 class Program
 {
     public static void Main()
@@ -18,8 +17,11 @@ class Program
         SPoint sp2 = new SPoint(1, 2);
 
         // value type 의 equality
-        // #1. == 연산자
-
+        // #1. == 연산자 
+        // => 기본적으로 제공 안됨.
+        WriteLine($"{sp1 == sp2}"); // error
+                                    // 단, 사용자가 연산자 오버로딩으로 제공가능
+        WriteLine($"{n1  == n2}");  // ok. Int32 타입이 연산자 오버로딩으로 제공
 
     }
 
