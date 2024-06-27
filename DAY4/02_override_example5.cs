@@ -7,16 +7,16 @@
 
 class Shape
 {
-    public void Draw() { WriteLine("Draw Shape"); }
+    public virtual void Draw() { WriteLine("Draw Shape"); }
 }
 
 class Rect : Shape
 {
-    public void Draw() { WriteLine("Draw Rect"); }
+    public override void Draw() { WriteLine("Draw Rect"); }
 }
 class Circle : Shape
 {
-    public void Draw() { WriteLine("Draw Circle"); }
+    public override void Draw() { WriteLine("Draw Circle"); }
 }
 
 class Program
@@ -35,7 +35,8 @@ class Program
             {
                 foreach (var s in list)
                 {
-                    
+                    // Shape 에 Draw가 있으므로 아래처럼 사용가능
+                    s.Draw();
                 }
             }
         }
