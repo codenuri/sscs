@@ -1,6 +1,18 @@
 ﻿// object1.cs
 using System.Drawing;
 
+// C# 의 대부분의 클래스는 Object 에서 파생됩니다.
+class Object
+{
+    // 이 안에 있는 특징(기능)은 모든 타입이 물려 받게 됩니다.
+
+    // 객체를 문자열로 반환하는 기능은 디버깅시에 아주 좋습니다.
+    public virtual  string? ToString()
+    {
+        // 기본 구현은 객체의 타입 반환.
+    }
+}
+
 class Program
 {
     public static void Main()
@@ -20,5 +32,11 @@ class Program
 
         Console.WriteLine( r.ToString() );
         Console.WriteLine( p.ToString() );
+
+
+        int[] arr = { 1, 2, 3 };
+
+        Console.WriteLine( arr.ToString() ); // 1. int[]    - C#
+                                             // 2. {1,2,3}  - Java, swift 
     }
 }
