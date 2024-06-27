@@ -5,10 +5,34 @@
 //           (문법적인 규칙이 아닌 디자인의 규칙)
 //          그래야 Shape 참조로 해당 기능을 사용할수 있다.
 
+// 핵심 1. 파생 클래스가 "override" 하게되는 것은 "virtual" 로 만들어야 한다.
+//         (디자인 규칙)
+
+// 핵심 2. 파생 클래스가 "override" 하지 않은 것은 "non-virtual" 로!
+
 class Shape
 {
+    private int color;
+
+    // 아래 2개 메소드는 "virtual" 로 할까요 ? "non-virtual"로 할까요 ?
+    // => 파생 클래스가 다시 만들 필요 없습니다.
+    // => non-virtual
+    public void SetColor(int c) { color = c; }
+    public int GetColor() { return color; }
+
+
+    // 모든 도형은 면적을 구할수 있습니다.
+    // => virtual ? non-virtual
+    // => 파생 클래스가 다시 만들게 되므로 virtual
+    // => non-virtual 로 해도 다시 만들수 있지만 s.GetArea()가 항상
+    //    Shape 메소드 호출 합니다. 잘못된 동작
+    public virtual int GetArea() { return 0; }
+
+
     public virtual void Draw() { WriteLine("Draw Shape"); }
 }
+
+
 
 class Rect : Shape
 {
