@@ -16,35 +16,19 @@ interface ICamera
 // "규칙대로만 사용하는 것이 좋습니다.
 class People
 {
-    public void Use(? c) { c.Take(); }
+    public void Use(ICamera c) { c.Take(); }
 }
 
+// 이제, 모든 카메라 제품은 규칙대로 설계되어야 합니다.
 
-
-
-
-
-
-
-
-
-
-
-
-class Camera
+class Camera : ICamera
 {
     public void Take() => WriteLine("Take a picture");
 }
 
-class HDCamera
+class HDCamera : ICamera
 {
     public void Take() => WriteLine("Take a HD picture");
-}
-
-class People
-{
-    public void Use(Camera c) => c.Take();
-    public void Use(HDCamera c) => c.Take();
 }
 
 class Program
