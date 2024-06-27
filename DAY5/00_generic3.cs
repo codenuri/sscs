@@ -21,16 +21,18 @@ class Program
         // "swap<int>" 같이 타입을 전달해도 되고, 생략해도 됩니다
         swap(ref n1, ref n2);
 
-
-        M1(1, 1.2);
-        M2(1, 1.2);
-        M3(1, 1.2);
-        M4(1);
+        M1(1, 2);   // ok
+        M1(1, 1.2); // error
+        M2(1, 1.2); // ok 
+        M3(1, 1.2); // ok
+        M4(1);      // error. 인자 타입은 인자로 추론되지만
+                    // 반환 타입은 추론 될수 없습니다.
+        M4<int>(1); // ok
 
     }
 
     public static void M1<T>(T a, T b) { }
     public static void M2<T1, T2>(T1 a, T2 b) { }
     public static void M3<A, B>(A a, B b) { } // 아무문자나 사용가능
-    public static R M4<R, T>(T a) { } // 반환 타입
+    public static R    M4<R, T>(T a) { return default(R); }      // 반환 타입
 }
