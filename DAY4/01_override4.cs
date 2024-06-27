@@ -24,8 +24,16 @@ class Program
         Animal a = new Dog();
 
         a.Cry1();   // non-virtual static binding, Animal Cry1
-                    
+                    // call 1000
+
         a.Cry2();   // virtual  dynamic binding    Dog Cry2
+
+
+        // 컴파일러의 원리
+        a.Cry2(); // 1. 이순간 Cry2 가 "virtual 인지 아닌지 조사" 해야 합니다
+                  // 2. 컴파일러는 Animal 클래스를 조사할까요 Dog 클래스를 조사할까요 ?
+                  // => 당연히 컴파일러는 "a 가 Animal" 인거 밖에 알수 없습니다.
+                  // => 따라서 Animal 클래스 조사
     }
 }
 
