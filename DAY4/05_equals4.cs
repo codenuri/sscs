@@ -22,6 +22,9 @@ class Point
 
 class Program
 {
+    public static bool MyReferenceEquals(object a, object b)
+        => a == b;
+
     public static void Main()
     {       
         Point p1 = new Point(1, 2);
@@ -31,13 +34,17 @@ class Program
 
         // == 가 operator overloading 되어 있어도
         // 객체의 동질성을 조사하고 싶다.
-        Console.WriteLine($"{(object)p1 == (object)p2}");  
+        // => p1, p2 가 Point 타입이므로 Point 안의 operator==사용
+        // => p1, p2 를 object 로 캐스팅하면 기본 버전의 == 사용
+        Console.WriteLine($"{(object)p1 == (object)p2}");  // false
+
+        Console.WriteLine($"{MyReferenceEquals(p1, p2)}");
 
 
 
 
 
-
+        /*
 
         string s1 = new string("ABC");
         string s2 = new string("ABC");
@@ -45,6 +52,7 @@ class Program
         // s1, s2 는 다른 객체
         Console.WriteLine($"{s1 == s2}");  // True.
                     // 즉, string 은 "operator==" 메소드 재정의
+    */
     }
 }
 
