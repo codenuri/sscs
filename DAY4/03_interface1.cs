@@ -16,13 +16,24 @@ interface FirstGroup
 // => Example 은 "FirstGroup" 규칙을 지키겠다는 의미
 class Example : FirstGroup
 {
-
+	// #3. Example 클래스는 반드시 FirstGroup 인터페이스에서 약속한
+	//     메소드를 구현해야 한다.
+	public void M1() { }
+	public int M2(int arg) { return 0; }
 }
 
 class Program 
 {
 	public static void Main()
 	{
-				
+		// #4. interface 는 객체를 생성할수 없습니다.
+		FirstGroup g = new FirstGroup();
+
+		// #5. 하지만 interface 타입은 참조로서는 사용가능합니다.
+		FirstGroup g2 = new Example(); // ok
+		 
+		// 즉, interface 는 객체는 만들수 없지만
+		// 참조 변수로는 사용가능합니다.
+		
 	}
 }
