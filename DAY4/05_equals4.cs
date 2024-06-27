@@ -29,6 +29,22 @@ class Program
 
         Console.WriteLine($"{p1 == p2}");  // true
 
+        // == 가 operator overloading 되어 있어도
+        // 객체의 동질성을 조사하고 싶다.
+        Console.WriteLine($"{(object)p1 == (object)p2}");  
+
+
+
+
+
+
+
+        string s1 = new string("ABC");
+        string s2 = new string("ABC");
+
+        // s1, s2 는 다른 객체
+        Console.WriteLine($"{s1 == s2}");  // True.
+                    // 즉, string 은 "operator==" 메소드 재정의
     }
 }
 
