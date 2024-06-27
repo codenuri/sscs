@@ -9,14 +9,28 @@ interface ICamera
 
     void Take();  // ok
 
-    int Weight { get; }; // ok. Weight 속성을 반드시 만들라는 의미
+    int Weight { get; } // ok. Weight 속성을 반드시 만들라는 의미
 }
 
 class Camera : ICamera
 {
     public void Take() { }
+    public int Weight { get; set; }
 }
 
+// 인터페이스 : 지켜야 하는 규칙만 담을수 있습니다.
+// 추상클래스 : 지켜야 하는 규칙 + 다른 멤버도 가능합니다.
+
+abstract class AbstractCamera
+{
+    private int color;  // ok
+
+    public void SetColor(int c) => color = c;  // ok
+
+//    void Take();  // error. 규칙은 추상클래스 문법에 맞게 다시표기
+
+    public abstract void Take(); // ok
+}
 
 
 class Program
