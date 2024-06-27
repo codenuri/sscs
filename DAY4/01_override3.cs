@@ -20,6 +20,17 @@ class Program
 {
     public static void Main()
     {
+        ? a;
+
+        int n = int.Parse( Console.ReadLine() );
+
+        if ( n == 1 )
+            a = new Dog();
+        else
+            a = new Cat();
+
+        // ÇÙ½É :
+        a.Cry();
     }
 }
 
