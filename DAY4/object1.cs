@@ -28,6 +28,15 @@ class Int32[]
     // ToString override 하지 않음.
 }
 
+// 사용자 정의 타입
+class Person
+{
+    public string Name { get; set; };
+    public int Age { get; set; };
+
+    // ToString() 을 override 해서 "Name, Age" 를 가지고 문자열로
+    // 반환하는 것이 좋습니다.
+}
 
 class Program
 {
