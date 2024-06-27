@@ -31,6 +31,13 @@ class HDCamera : ICamera
     public void Take() => WriteLine("Take a HD picture");
 }
 
+// UHDCamera 를 추가해 보세요
+// Main 에서 객체를 생성해서 사용해 보세요
+class UHDCamera : ICamera
+{
+    public void Take() => WriteLine("Take a UHD picture");
+}
+
 class Program
 {
     public static void Main()
@@ -41,6 +48,9 @@ class Program
 
         HDCamera hc = new HDCamera();
         p.Use(hc);
+
+        UHDCamera uhc = new UHDCamera();
+        p.Use(uhc);
 
     }
 }
