@@ -67,3 +67,17 @@ class Program
 
     }
 }
+
+/*
+// 카메라 만들때 규칙을 지키지 않아도 사용가능하지만
+class GoodCamera
+{
+    public void Take() => WriteLine("Take Good Picture");
+}
+
+GoodCamera gc = new GoodCamera();
+gc.Take(); // ok. 
+
+// 하지만 규칙대로 사용하는 클래스(people)에 보낼수는 없습니다.
+p.Use(gc); // error
+*/
