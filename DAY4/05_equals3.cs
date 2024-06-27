@@ -51,5 +51,9 @@ class Program
         // => 구현 확인해 보세요
         Console.WriteLine($"{object.Equals(p1, p2)}");
 
+        // 1. p1 == p2 로 동일객체라면 true
+        // 2. p1, p2 가 한개라도 null 이면 false
+        // 3. 그렇지 않으면 p1.Equals(p2)로 조사
+
     }
 }
