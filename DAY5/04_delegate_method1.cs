@@ -21,8 +21,13 @@ class Program
 
         // 핵심 : delegate 에 method 를 등록하는 방법
 
-        MyFunc f1 = SMethod;
-        MyFunc f2 = IMethod;
+        MyFunc f1 = Test.SMethod;  // static method 는 "클래스이름.메소드이름"
+        
+//      MyFunc f2 = Test.IMethod; // error.
+
+        Test t = new Test();    
+        MyFunc f2 = t.IMethod;  // ok. instance method는
+                                // "객체이름.메소드이름"
 
     }
 }
