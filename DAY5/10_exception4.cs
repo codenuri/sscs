@@ -4,6 +4,15 @@
     {
         string s = "A";
 
-        int n = int.Parse(s);
+        try
+        {
+            int n = int.Parse(s);
+        }
+        catch(FormatException e)  
+        {
+            Console.WriteLine(e.Message); // 설명
+            Console.WriteLine(e.Source); // 
+            Console.WriteLine(e.StackTrace); // call stack
+        }
     }
 }
