@@ -15,8 +15,10 @@ class Program
 
 
         // #2. 배열에서 처음 나오는 "짝수"를 찾고 싶다. 조건검색
-        int ret2 = Array.FindIndex(x, 메소드);
+		// => FindIndex 의 2번째 인자는 "인자가 한개인 메소드" 입니다.
+        int ret2 = Array.FindIndex(x, IsEven);
         WriteLine($"{ret2}"); 
     }
-
+	
+	public static bool IsEven(int n) => n % 2 == 0;
 }
