@@ -1,22 +1,24 @@
 using static System.Console;
 
-class Digit : IComparable
+// struct 일때가 핵심 입니다.
+struct Digit : IComparable
 {
     public int Value { get; set; }
 
     public Digit(int n) => Value = n;
 
-    // #1. 인자로 정확한 타입을 표시했습니다
+    /*
     public int CompareTo(Digit other)
     {
-        return Value.CompareTo(other.Value);    
+        return Value.CompareTo(other.Value);
     }
-
-    // #2. IComparable 인터페이스를 구현하겠다고 표기하고
-    // CompareTo 를 구현하면 인자를 object 로 하게 되므로
-    // 아래 와 같이 캐스팅이 필요하게 됩니다.
-    // "참조 변수" 한개 추가됩니다.
-    // => 큰 오버헤드는 아닙니다.
+    */
+   
+    // 아래 코드의 오버헤드를 생각해보세요
+    // => 값타입 객체를 "reference type" 으로 받으므로
+    //    boxing 에 의한 힙 객체가 생성됩니다.
+    //    성능이 좋지 않습니다.
+    // => 인자로 object 가 아니라 정확한 타입으로 받는 것이 좋습니다.
     public int CompareTo(object other)
     {
         Digit obj = (Digit)other;
