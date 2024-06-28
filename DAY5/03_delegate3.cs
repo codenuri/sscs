@@ -16,17 +16,25 @@ class Program
         MyFunc f1 = Foo;
         f1 += Goo;
 
-        f1(10); // Foo(10), Goo(10)
+//      f1(10); // Foo(10), Goo(10)
 
 
-        // #2. delegate 는 "reference type", "immutable" 합니다.
+        // #2. delegate 는 "reference type",
+        // "immutable" 합니다.
 
-        MyFunc f2 = Foo;
+        MyFunc f2 = Foo; // new MyFunc(Foo)
         MyFunc f3 = f2;
 
-        f2 += Goo;
+        WriteLine($"{object.ReferenceEquals(f2, f3)}");
+
+        f2 += Goo; // new MyFunc(f2, Goo) 의미의 코드
+                   // 직접 이렇게는 안되고 += 로해야 합니다.
+
+        WriteLine($"{object.ReferenceEquals(f2, f3)}");
 
         f3(10); // 결과 예측해 보세요.
+                // 1. Foo, Goo
+                // 2. Foo   <= 정답!
   
     }
 
