@@ -1,5 +1,6 @@
 using static System.Console;
 
+// delegate bool Predicate<in T>(T obj); // 실제 C# 표준
 delegate bool Predicate<T>(T n);
 
 class Program
