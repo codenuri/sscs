@@ -27,8 +27,11 @@ class Program
 
         WriteLine($"{object.ReferenceEquals(f2, f3)}");
 
-        f2 += Goo; // new MyFunc(f2, Goo) 의미의 코드
-                   // 직접 이렇게는 안되고 += 로해야 합니다.
+//        f2 += Goo; // new MyFunc(f2, Goo) 의미의 코드
+                    // 직접 이렇게는 안되고 += 로해야 합니다.
+                    // 아래 처럼 하면 됩니다.
+        f2 = (MyFunc)Delegate.Combine(f2, new MyFunc(Goo));
+
 
         WriteLine($"{object.ReferenceEquals(f2, f3)}");
 
