@@ -18,7 +18,7 @@ class Program
     }
 
     // Array.FindIndex 를 직접 만들어 봅시다.
-    public static int FindIndex(int[] arr, MyFunc match)
+    public static int MyFindIndex(int[] arr, MyFunc match)
     {
         int sz = arr.Length;
 
