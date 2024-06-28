@@ -1,7 +1,9 @@
 using static System.Console;
 
-
-delegate bool MyFunc(int n);
+// Predicate(조건자) : bool 을 반환하는 메소드
+//                    검색조건등을 담은 함수를 만들때 사용
+//                    대부분의 언어에서 "predicate" 용어 사용
+delegate bool Predicate(int n);
 
 class Program
 {
@@ -18,7 +20,7 @@ class Program
     }
 
     // Array.FindIndex 를 직접 만들어 봅시다.
-    public static int MyFindIndex(int[] arr, MyFunc match)
+    public static int MyFindIndex(int[] arr, Predicate match)
     {
         int sz = arr.Length;
 
