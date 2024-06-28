@@ -1,5 +1,17 @@
 ﻿using static System.Console;
 
+
+// Sort 에 비교 정책으로 전달하기 위한 객체는 반드시
+// IComparer<T> 를 구현해야 합니다.
+class MyComp : IComparer<int>
+{
+    public int Compare(int x, int y)
+    {
+        return x.CompareTo(y);
+    }
+}
+
+
 class Program
 {
     public static int MyComparer(int a, int b)
