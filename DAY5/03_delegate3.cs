@@ -35,10 +35,18 @@ class Program
 
         WriteLine($"{object.ReferenceEquals(f2, f3)}");
 
+        f3 = f2;
+
+        WriteLine($"{object.ReferenceEquals(f2, f3)}");
         f3(10); // 결과 예측해 보세요.
                 // 1. Foo, Goo
                 // 2. Foo   <= 정답!
-  
+
+        f2 -= Foo; // new MyFunc
+
+        WriteLine($"{object.ReferenceEquals(f2, f3)}");
+        WriteLine("---");
+        f3(10);
     }
 
 
