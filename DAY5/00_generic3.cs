@@ -22,7 +22,9 @@ class Program
         swap(ref n1, ref n2);
 
         M1(1, 2);   // ok
-        M1(1, 1.2); // error
+        M1(1, 1.2); // ok. double 로 추론. 
+        M1("aaa", 1.2); // error
+
         M2(1, 1.2); // ok 
         M3(1, 1.2); // ok
 //      M4(1);      // error. 인자 타입은 인자로 추론되지만
