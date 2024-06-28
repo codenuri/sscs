@@ -4,11 +4,11 @@ delegate void Handler(Button source);
 
 class Button
 {
-    public Handler Click = null; // ë²„íŠ¼ì„ ëˆ„ë¥¼ë•Œ í˜¸ì¶œë  í•¨ìˆ˜ë“±ë¡
+    public Handler Click = null; // ¹öÆ°À» ´©¸¦¶§ È£ÃâµÉ ÇÔ¼öµî·Ï
 
     public void UserPressButton()
     {
-        Click?.Invoke(this); // Click ì´ null ì´ ì•„ë‹ˆë©´ í˜¸ì¶œ
+        Click?.Invoke(this); // Click ÀÌ null ÀÌ ¾Æ´Ï¸é È£Ãâ
     }
 }
 
@@ -16,15 +16,16 @@ class Program
 {
     public static void Foo(Button source) => WriteLine("Foo");
     public static void Goo(Button source) => WriteLine("Goo");
+    public static void Hoo(Button source) => WriteLine("Hoo");
+
     public static void Main()
     {
         Button btn1 = new Button();
-        Button btn2 = new Button();
 
         btn1.Click = Foo;
-        btn2.Click = Goo; // ë²„íŠ¼ ëˆŒë €ì„ë•Œ í˜¸ì¶œë  ë©”ì†Œë“œ ë“±ë¡
+        btn1.Click += Goo;
+        btn1.Click += Hoo;
 
-        btn1.UserPressButton(); // Foo í˜¸ì¶œ
-        btn2.UserPressButton(); // Goo í˜¸ì¶œ
+        btn1.UserPressButton(); 
     }
 }
