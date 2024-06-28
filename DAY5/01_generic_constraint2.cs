@@ -15,6 +15,9 @@ class Program
 {
 
     // 방법 #1. a 를 IComparable 타입으로 캐스팅해서 사용
+    // => 특징 : IComparable 인터페이스를 구현하지 않은
+    //           객체가 인자로 전달되면
+    //           캐스팅 실패!. runtime error(예외 발생)
     public static T Max<T>(T a, T b)
     {
         IComparable ia = (IComparable)a;
@@ -22,19 +25,15 @@ class Program
         return ia.CompareTo(b) < 0 ? b : a;
     }
 
-
-
-
     public static void Main()
     {
         var ret1 = Max(3, 4);
         var ret2 = Max(3.4, 4.2);
         var ret3 = Max("A", "B");
 
-
-
         Point p1 = new Point(1, 1);
         Point p2 = new Point(2, 2);
 
+        var ret4 = Max(p1, p2);
     }
 }
