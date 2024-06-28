@@ -25,14 +25,20 @@ class Program
 
 		// 위 코드를 잘생각해 보고 아래 ? 에 ok. error 로 채우세요
 		// error 인 경우, 수정해 보세요
-		MyFunc f1 = Program.SMethod; // ?
-		MyFunc f2 = SMethod;		 // ?
-		MyFunc f3 = IMethod;		 // ?
+		MyFunc f1 = Program.SMethod; // ok
+		MyFunc f2 = SMethod;         // ok
+//		MyFunc f3 = IMethod;		 // error
+        MyFunc f3 = p.IMethod;       // ok
 
-		p.InstanceMethod();
+        p.InstanceMethod();
 	}
 
 	public void InstanceMethod()
 	{
-	}
+		// 이 메소드가 호출된것은 객체가 생성된것
+        MyFunc f1 = Program.SMethod; // ok
+        MyFunc f2 = SMethod;         // ok
+		MyFunc f3 = IMethod;		 // ok
+        MyFunc f4 = this.IMethod;    // 위 코드를 컴파일러가 이렇게 변경
+    }
 }
