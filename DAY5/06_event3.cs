@@ -31,8 +31,8 @@ class Program
     {
         Button btn1 = new Button();
 
-        btn1.Click = Foo;
-        btn1.Click += Goo;
+        btn1.Click = Foo;   // event 는 = 안됩니다. error
+        btn1.Click += Goo;  // ok. += 만 가능
 //      btn1.Click += Hoo;
         btn1.Click = Hoo; // += 한다는 것을 =로 실수했다
 
